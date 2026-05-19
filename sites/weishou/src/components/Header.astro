@@ -1,0 +1,54 @@
+---
+const navItems = [
+  { label: 'ホーム', href: '#home' },
+  { label: '事業内容', href: '#services' },
+  { label: '施工事例', href: '#works' },
+  { label: '会社概要', href: '#about' },
+  { label: 'お問い合わせ', href: '#contact' },
+];
+---
+<header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white border-b-2 border-craft transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-3">
+      <img src="/logo.png" alt="微匠合同会社" class="h-10 w-auto" />
+      <div class="hidden sm:block">
+        <p class="text-ink font-bold text-sm leading-none">微匠合同会社</p>
+        <p class="text-craft text-[10px] tracking-wide mt-0.5">WEISHOU LLC.</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6">
+      {navItems.map((item) => (
+        <a href={item.href}
+          class="text-ink/60 hover:text-craft text-sm font-medium transition-colors duration-200">
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <a href="#contact" class="hidden md:inline-block btn-craft text-xs px-5 py-2">
+      お見積り依頼
+    </a>
+
+    <button id="menu-btn" class="md:hidden text-ink" aria-label="メニュー">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+    <nav class="flex flex-col py-2">
+      {navItems.map((item) => (
+        <a href={item.href} class="px-6 py-3 text-ink/70 hover:text-craft text-sm font-medium">{item.label}</a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn?.addEventListener('click', () => mobileMenu!.classList.toggle('hidden'));
+  mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu!.classList.add('hidden')));
+</script>

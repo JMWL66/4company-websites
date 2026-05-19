@@ -1,0 +1,75 @@
+---
+---
+<section id="contact" class="py-28 px-6 bg-obsidian-800 relative overflow-hidden">
+  <!-- Background accent -->
+  <div class="absolute top-0 right-0 w-1/3 h-full opacity-5"
+    style="background: linear-gradient(to left, #C9A84C, transparent);" aria-hidden="true"></div>
+
+  <div class="max-w-4xl mx-auto relative z-10">
+    <div class="mb-16 fade-up text-center">
+      <p class="section-label mb-4">CONTACT</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-4">お問い合わせ</h2>
+      <span class="gold-line block w-12 mx-auto"></span>
+      <p class="text-white/40 text-sm mt-6 font-sans font-light">
+        ご用件・ご質問などお気軽にお問い合わせください。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <!-- Contact info -->
+      <div class="fade-up space-y-8">
+        <div>
+          <p class="text-gold/60 text-xs tracking-widest mb-2">ADDRESS</p>
+          <p class="text-white/60 text-sm font-sans font-light leading-relaxed">
+            〒170-0013<br />
+            東京都豊島区東池袋1丁目31番17号<br />
+            ドミール池袋606
+          </p>
+        </div>
+        <div>
+          <p class="text-gold/60 text-xs tracking-widest mb-2">PHONE</p>
+          <a href="tel:0366819915" class="text-white/60 text-sm hover:text-gold transition-colors">
+            03-6681-9915
+          </a>
+        </div>
+        <div>
+          <p class="text-gold/60 text-xs tracking-widest mb-2">EMAIL</p>
+          <a href="mailto:info@tokaikk.jp" class="text-white/60 text-sm hover:text-gold transition-colors">
+            info@tokaikk.jp
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact form -->
+      <form class="fade-up space-y-4" action="mailto:info@tokaikk.jp" method="get" enctype="text/plain">
+        <div>
+          <label class="block text-gold/60 text-xs tracking-widest mb-2">お名前</label>
+          <input
+            type="text" name="name" required
+            class="w-full bg-obsidian-600 border border-white/10 text-white text-sm px-4 py-3 focus:border-gold/50 focus:outline-none transition-colors"
+            placeholder="山田 太郎"
+          />
+        </div>
+        <div>
+          <label class="block text-gold/60 text-xs tracking-widest mb-2">メールアドレス</label>
+          <input
+            type="email" name="email" required
+            class="w-full bg-obsidian-600 border border-white/10 text-white text-sm px-4 py-3 focus:border-gold/50 focus:outline-none transition-colors"
+            placeholder="example@email.com"
+          />
+        </div>
+        <div>
+          <label class="block text-gold/60 text-xs tracking-widest mb-2">お問い合わせ内容</label>
+          <textarea
+            name="body" rows="5" required
+            class="w-full bg-obsidian-600 border border-white/10 text-white text-sm px-4 py-3 focus:border-gold/50 focus:outline-none transition-colors resize-none"
+            placeholder="お問い合わせ内容をご記入ください"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn-gold w-full text-center">
+          送 信
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

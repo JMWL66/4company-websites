@@ -1,0 +1,52 @@
+---
+const navItems = [
+  { label: 'ホーム', href: '#home' },
+  { label: '事業内容', href: '#services' },
+  { label: '会社について', href: '#about' },
+  { label: '採用情報', href: '#recruit' },
+  { label: 'お問い合わせ', href: '#contact' },
+];
+---
+<header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-3">
+      <img src="/logo.png" alt="E電株式会社" class="h-10 w-auto" />
+      <div>
+        <p class="font-sans font-bold text-gray-900 text-sm leading-none">E電株式会社</p>
+        <p class="text-primary text-[10px] tracking-wider mt-0.5">E-DEN Corporation</p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-6">
+      {navItems.map((item) => (
+        <a href={item.href}
+          class="text-gray-600 hover:text-primary text-sm font-medium transition-colors duration-200">
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <button id="menu-btn" class="md:hidden text-primary" aria-label="メニュー">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+    <nav class="flex flex-col py-2">
+      {navItems.map((item) => (
+        <a href={item.href} class="px-6 py-3 text-gray-700 hover:text-primary text-sm font-medium">
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn?.addEventListener('click', () => mobileMenu!.classList.toggle('hidden'));
+  mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu!.classList.add('hidden')));
+</script>

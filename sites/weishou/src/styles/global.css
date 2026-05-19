@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-white text-ink font-sans antialiased; }
+  ::selection { @apply bg-craft text-white; }
+}
+
+@layer components {
+  .btn-craft {
+    @apply inline-block px-8 py-3 bg-craft text-white text-sm font-bold
+           hover:bg-craft-dark transition-all duration-300;
+  }
+  .btn-outline-craft {
+    @apply inline-block px-8 py-3 border-2 border-craft text-craft text-sm font-bold
+           hover:bg-craft hover:text-white transition-all duration-300;
+  }
+  .btn-dark {
+    @apply inline-block px-8 py-3 bg-ink text-white text-sm font-bold
+           hover:bg-ink-800 transition-all duration-300;
+  }
+  .section-label {
+    @apply text-craft text-xs tracking-widest font-medium uppercase;
+  }
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

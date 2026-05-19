@@ -1,0 +1,43 @@
+---
+---
+<section id="about" class="py-24 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="fade-up">
+        <span class="section-label mb-4 block">ABOUT</span>
+        <h2 class="text-3xl md:text-4xl font-black text-navy mb-6">会社概要</h2>
+        <div class="w-12 h-1 bg-orange mb-8"></div>
+        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+          株式会社JCコンサルティングは、中小・中堅企業を中心に、経営戦略・組織人事・ITコンサルティングなど幅広い経営課題の解決を支援するコンサルティングファームです。
+        </p>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          クライアントファーストの姿勢と、確かな実績・知見を武器に、お客様の持続的な成長と競争力強化に貢献します。
+        </p>
+        <div class="mt-8">
+          <p class="text-gray-400 text-xs">代表取締役</p>
+          <p class="text-navy font-bold text-xl mt-1">山口 結愛</p>
+          <p class="text-orange text-xs tracking-widest mt-1">YAMAGUCHI YUINA</p>
+        </div>
+      </div>
+
+      <div class="fade-up bg-gray-50 rounded-lg p-8">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-gray-100">
+            {[
+              { label: '会社名', value: '株式会社JCコンサルティング' },
+              { label: '代表取締役', value: '山口 結愛' },
+              { label: '所在地', value: '〒101-0031\n東京都千代田区東神田1-3-2\nBIGS東神田5階' },
+              { label: 'メール', value: 'jc.ceo.yamaguchi@gmail.com' },
+              { label: '事業内容', value: '経営戦略・組織人事・IT・マーケティングコンサルティング' },
+            ].map((row) => (
+              <tr>
+                <td class="py-3 pr-4 text-gray-400 text-xs whitespace-nowrap w-28">{row.label}</td>
+                <td class="py-3 text-gray-800 font-medium text-xs leading-relaxed whitespace-pre-line">{row.value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

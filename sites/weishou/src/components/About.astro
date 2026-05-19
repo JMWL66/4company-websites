@@ -1,0 +1,48 @@
+---
+---
+<section id="about" class="py-24 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div class="fade-up">
+        <span class="section-label mb-4 block">ABOUT</span>
+        <h2 class="text-3xl md:text-4xl font-black text-ink mb-4">会社概要</h2>
+        <div class="w-12 h-1 bg-craft mb-8"></div>
+        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+          微匠合同会社は、「内装工事」と「ITソリューション」の二つの専門領域を持つユニークな企業です。空間づくりとデジタル技術の融合により、クライアントの多様なニーズに応えます。
+        </p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-8">
+          「微匠」の名は、細部へのこだわりと職人の精神を体現しています。どんな小さな案件にも丁寧に、最高の仕上がりを追求します。
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="p-4 bg-craft-50 border-l-4 border-craft">
+            <p class="text-craft text-xs font-bold tracking-wide mb-1">CRAFT</p>
+            <p class="text-ink text-sm font-bold">内装の匠</p>
+          </div>
+          <div class="p-4 bg-gray-50 border-l-4 border-ink">
+            <p class="text-ink/50 text-xs font-bold tracking-wide mb-1">DIGITAL</p>
+            <p class="text-ink text-sm font-bold">ITの力</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="fade-up bg-gray-50 rounded-lg p-8">
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-gray-100">
+            {[
+              { label: '会社名', value: '微匠合同会社' },
+              { label: '代表社員', value: '山口 結愛' },
+              { label: '所在地', value: '〒101-0031\n東京都千代田区東神田1-3-2\nBIGS東神田2階' },
+              { label: '電話番号', value: '03-5829-6251' },
+              { label: '事業内容', value: '内装工事・ITソリューション' },
+            ].map((row) => (
+              <tr>
+                <td class="py-3 pr-4 text-gray-400 text-xs whitespace-nowrap w-28">{row.label}</td>
+                <td class="py-3 text-ink font-medium text-xs leading-relaxed whitespace-pre-line">{row.value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

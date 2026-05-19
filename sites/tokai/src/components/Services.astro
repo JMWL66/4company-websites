@@ -1,0 +1,61 @@
+---
+const services = [
+  {
+    num: '01',
+    title: '総合商社事業',
+    sub: 'General Trading',
+    desc: '国内外の多様な産業・市場において、卓越した調達力と流通ネットワークを活かし、付加価値の高い商取引を展開しています。',
+  },
+  {
+    num: '02',
+    title: 'コンサルティング事業',
+    sub: 'Consulting',
+    desc: '経営戦略の立案から実行支援まで、豊富な知見と独自の分析手法によりクライアント企業の持続的成長を実現します。',
+  },
+  {
+    num: '03',
+    title: '投資・ファイナンス',
+    sub: 'Investment & Finance',
+    desc: '長期的な視野に基づいた戦略的投資により、持続可能な資産形成と企業価値の最大化をサポートします。',
+  },
+  {
+    num: '04',
+    title: '不動産事業',
+    sub: 'Real Estate',
+    desc: '首都圏を中心とした優良不動産の開発・運用・管理を通じ、安定した価値と住・商空間の品質向上を追求します。',
+  },
+];
+---
+<section id="services" class="py-28 px-6 bg-obsidian-800 relative overflow-hidden">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section header -->
+    <div class="mb-20 fade-up">
+      <p class="section-label mb-4">OUR BUSINESS</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-4">
+        事業内容
+      </h2>
+      <span class="gold-line block w-12"></span>
+    </div>
+
+    <!-- Services grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-gold/10">
+      {services.map((s, i) => (
+        <div
+          class="fade-up bg-obsidian-800 p-10 hover:bg-obsidian-700 transition-colors duration-300 group"
+          style={`transition-delay: ${i * 100}ms`}
+        >
+          <p class="text-gold/40 font-display text-5xl font-light mb-6 group-hover:text-gold/70 transition-colors">
+            {s.num}
+          </p>
+          <div class="gold-border-left mb-4">
+            <h3 class="text-white text-lg font-sans font-medium">{s.title}</h3>
+            <p class="text-gold/60 text-xs tracking-wider mt-1">{s.sub}</p>
+          </div>
+          <p class="text-white/50 text-sm font-sans font-light leading-relaxed">
+            {s.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

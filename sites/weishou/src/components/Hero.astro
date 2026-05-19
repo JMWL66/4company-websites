@@ -1,0 +1,71 @@
+---
+---
+<section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-ink">
+  <!-- Red accent bar -->
+  <div class="absolute left-0 top-0 w-2 h-full bg-craft" aria-hidden="true"></div>
+
+  <!-- Pattern bg -->
+  <div class="absolute inset-0 opacity-5"
+    style="background-image: linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px); background-size: 60px 60px;" aria-hidden="true"></div>
+
+  <!-- Red glow bottom right -->
+  <div class="absolute bottom-0 right-0 w-1/2 h-1/2 opacity-10"
+    style="background: radial-gradient(circle at 80% 80%, #CC1111, transparent 60%);" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 pl-12 py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <!-- Left text -->
+    <div>
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded mb-8"
+        style="background: rgba(204,17,17,0.15); border: 1px solid rgba(204,17,17,0.3);">
+        <span class="w-2 h-2 rounded-sm bg-craft"></span>
+        <span class="text-craft text-xs tracking-wider font-bold">内装工事 × IT SOLUTIONS</span>
+      </div>
+
+      <h1 class="font-sans font-black text-4xl sm:text-5xl md:text-6xl text-white leading-tight mb-6">
+        空間をつくり、<br />
+        <span class="text-craft">ITで繋ぐ。</span>
+      </h1>
+
+      <p class="text-white/50 text-base font-light leading-relaxed mb-10 max-w-lg">
+        内装デザイン・施工とITソリューションの融合で、<br class="hidden sm:block"/>
+        豊かな空間・働く環境を実現します。
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#contact" class="btn-craft px-10 py-4">お見積り・ご相談</a>
+        <a href="#services" class="btn-outline-craft px-10 py-4">事業内容を見る</a>
+      </div>
+    </div>
+
+    <!-- Right: dual business cards -->
+    <div class="grid grid-cols-1 gap-4">
+      <div class="rounded-lg p-6 flex items-start gap-4" style="background: rgba(204,17,17,0.08); border: 1px solid rgba(204,17,17,0.2);">
+        <div class="w-12 h-12 rounded bg-craft/20 flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-craft" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-1">内装工事事業</h3>
+          <p class="text-white/50 text-sm">住宅・店舗・オフィスの内装設計・施工。質の高い仕上がりと丁寧な施工管理。</p>
+        </div>
+      </div>
+      <div class="rounded-lg p-6 flex items-start gap-4" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);">
+        <div class="w-12 h-12 rounded bg-white/10 flex items-center justify-center flex-shrink-0">
+          <svg class="w-6 h-6 text-white/70" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="text-white font-bold mb-1">ITソリューション事業</h3>
+          <p class="text-white/50 text-sm">Webシステム開発・業務効率化ツール・DX支援。テクノロジーで業務を革新します。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
+    <div class="w-px h-10 bg-gradient-to-b from-craft to-transparent"></div>
+    <span class="text-white text-[10px] tracking-widest">SCROLL</span>
+  </div>
+</section>

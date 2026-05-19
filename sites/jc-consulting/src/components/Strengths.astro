@@ -1,0 +1,39 @@
+---
+const strengths = [
+  {
+    icon: '🎯',
+    title: '本質的な課題解決',
+    desc: '表面的な症状ではなく、経営課題の根本原因を特定し、持続可能な解決策を提供します。',
+  },
+  {
+    icon: '⚡',
+    title: 'スピードと柔軟性',
+    desc: '大手ファームにはない機動力と柔軟な対応で、スピーディーに成果を出すことを重視します。',
+  },
+  {
+    icon: '🤝',
+    title: '伴走型サポート',
+    desc: '提案で終わらず、実行フェーズまで寄り添い、クライアントと共に成果を実現します。',
+  },
+];
+---
+<section id="strengths" class="py-24 px-6 bg-navy">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 fade-up">
+      <span class="text-orange text-xs tracking-widest font-medium uppercase mb-3 block">WHY JC</span>
+      <h2 class="text-3xl md:text-4xl font-black text-white mb-4">JCコンサルティングの強み</h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {strengths.map((s, i) => (
+        <div
+          class="fade-up text-center p-8 rounded-lg"
+          style={`background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); transition-delay: ${i * 100}ms`}
+        >
+          <div class="text-4xl mb-4">{s.icon}</div>
+          <h3 class="text-white font-bold text-lg mb-3">{s.title}</h3>
+          <p class="text-white/50 text-sm leading-relaxed">{s.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

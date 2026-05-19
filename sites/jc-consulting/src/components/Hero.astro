@@ -1,0 +1,54 @@
+---
+---
+<section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-navy-900">
+  <!-- Diagonal accent shape -->
+  <div class="absolute right-0 top-0 h-full w-1/2 opacity-20 hidden lg:block" aria-hidden="true"
+    style="background: linear-gradient(135deg, transparent 0%, #F5821F 100%); clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);"></div>
+  <!-- Dot grid -->
+  <div class="absolute inset-0 opacity-5"
+    style="background-image: radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 32px 32px;" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 py-20">
+    <div class="max-w-2xl">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
+        style="background: rgba(245,130,31,0.15); border: 1px solid rgba(245,130,31,0.3);">
+        <span class="w-2 h-2 rounded-full bg-orange"></span>
+        <span class="text-orange text-xs tracking-wider font-medium">JC CONSULTING</span>
+      </div>
+
+      <h1 class="font-sans font-black text-4xl sm:text-5xl md:text-6xl text-white leading-tight mb-6">
+        経営の課題に、<br />
+        <span class="text-orange">本質的な答えを。</span>
+      </h1>
+
+      <p class="text-white/60 text-base font-light leading-relaxed mb-10 max-w-lg">
+        戦略立案から実行支援まで、貴社の持続的成長を<br class="hidden sm:block"/>
+        トータルサポートします。
+      </p>
+
+      <div class="flex flex-wrap gap-4">
+        <a href="#contact" class="btn-orange px-10 py-4">無料相談を申し込む</a>
+        <a href="#services" class="btn-outline-white px-10 py-4">サービスを見る</a>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="mt-14 pt-10 border-t border-white/10 flex flex-wrap gap-10">
+        {[
+          { num: '100%', label: 'オーダーメイド対応' },
+          { num: '迅速', label: 'スピーディーな対応' },
+          { num: '一貫', label: '戦略〜実行まで' },
+        ].map((s) => (
+          <div>
+            <p class="text-orange text-2xl font-black">{s.num}</p>
+            <p class="text-white/50 text-xs mt-1">{s.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
+    <div class="w-px h-10 bg-gradient-to-b from-orange to-transparent"></div>
+    <span class="text-white text-[10px] tracking-widest">SCROLL</span>
+  </div>
+</section>

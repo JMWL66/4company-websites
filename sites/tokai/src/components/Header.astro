@@ -1,0 +1,86 @@
+---
+const navItems = [
+  { label: 'HOME', href: '#home' },
+  { label: '事業内容', href: '#services' },
+  { label: '会社概要', href: '#about' },
+  { label: 'お問い合わせ', href: '#contact' },
+];
+---
+<header
+  id="header"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+  style="background: transparent;"
+>
+  <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#home" class="flex items-center gap-3 group">
+      <img src="/logo.png" alt="東海株式会社" class="h-10 w-auto" />
+      <div class="hidden sm:block">
+        <p class="text-gold text-xs tracking-widest font-sans">TOKAI</p>
+        <p class="text-white/60 text-[10px] tracking-wider">株式会社</p>
+      </div>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-8">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class="text-white/60 hover:text-gold text-xs tracking-widest transition-colors duration-300 font-sans"
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Mobile menu toggle -->
+    <button id="menu-btn" class="md:hidden text-gold" aria-label="メニュー">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="hidden md:hidden bg-obsidian-800 border-t border-gold/20"
+  >
+    <nav class="flex flex-col py-4">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class="px-8 py-3 text-white/70 hover:text-gold text-sm tracking-widest transition-colors"
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const header = document.getElementById('header');
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 60) {
+      header!.style.background = 'rgba(10,10,10,0.95)';
+      header!.style.backdropFilter = 'blur(12px)';
+      header!.style.borderBottom = '1px solid rgba(201,168,76,0.15)';
+    } else {
+      header!.style.background = 'transparent';
+      header!.style.backdropFilter = 'none';
+      header!.style.borderBottom = 'none';
+    }
+  });
+
+  menuBtn?.addEventListener('click', () => {
+    mobileMenu!.classList.toggle('hidden');
+  });
+
+  mobileMenu?.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => mobileMenu!.classList.add('hidden'));
+  });
+</script>

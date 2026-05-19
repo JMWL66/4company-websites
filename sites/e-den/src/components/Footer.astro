@@ -1,0 +1,16 @@
+---
+---
+<footer style="background: #001A33;" class="py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <img src="/logo.png" alt="E電株式会社" class="h-8 w-auto" />
+      <span class="text-white/40 text-xs">E電株式会社</span>
+    </div>
+    <nav class="flex gap-6">
+      {[['事業内容','#services'],['会社について','#about'],['採用情報','#recruit'],['お問い合わせ','#contact']].map(([label,href]) => (
+        <a href={href} class="text-white/40 hover:text-white/70 text-xs transition-colors">{label}</a>
+      ))}
+    </nav>
+    <p class="text-white/20 text-xs">© 2025 E電株式会社. All Rights Reserved.</p>
+  </div>
+</footer>

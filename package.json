@@ -1,0 +1,19 @@
+{
+  "name": "4company-websites",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:tokai": "pnpm --filter @4company/tokai dev",
+    "dev:eden": "pnpm --filter @4company/e-den dev",
+    "dev:jc": "pnpm --filter @4company/jc-consulting dev",
+    "dev:weishou": "pnpm --filter @4company/weishou dev",
+    "build:all": "pnpm --filter './sites/*' build",
+    "build:tokai": "pnpm --filter @4company/tokai build",
+    "build:eden": "pnpm --filter @4company/e-den build",
+    "build:jc": "pnpm --filter @4company/jc-consulting build",
+    "build:weishou": "pnpm --filter @4company/weishou build"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

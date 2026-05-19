@@ -1,0 +1,29 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "tokai",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "@4company/tokai", "preview", "--port", "4321"],
+      "port": 4321
+    },
+    {
+      "name": "e-den",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "@4company/e-den", "preview", "--port", "4322"],
+      "port": 4322
+    },
+    {
+      "name": "jc-consulting",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "@4company/jc-consulting", "preview", "--port", "4323"],
+      "port": 4323
+    },
+    {
+      "name": "weishou",
+      "runtimeExecutable": "pnpm",
+      "runtimeArgs": ["--filter", "@4company/weishou", "preview", "--port", "4324"],
+      "port": 4324
+    }
+  ]
+}

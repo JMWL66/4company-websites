@@ -1,0 +1,21 @@
+---
+---
+<footer class="bg-obsidian border-t border-white/5 py-10 px-6">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <img src="/logo.png" alt="東海株式会社" class="h-8 w-auto opacity-70" />
+      <span class="text-white/30 text-xs tracking-wider">東海株式会社</span>
+    </div>
+    <nav class="flex gap-6">
+      {['事業内容', '会社概要', 'お問い合わせ'].map((item, i) => {
+        const hrefs = ['#services', '#about', '#contact'];
+        return (
+          <a href={hrefs[i]} class="text-white/30 hover:text-gold/70 text-xs tracking-wider transition-colors">
+            {item}
+          </a>
+        );
+      })}
+    </nav>
+    <p class="text-white/20 text-xs">© 2025 東海株式会社. All Rights Reserved.</p>
+  </div>
+</footer>

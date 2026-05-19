@@ -1,0 +1,57 @@
+---
+---
+<section id="about" class="py-24 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Left: vision -->
+      <div class="fade-up">
+        <span class="section-label mb-4 block">ABOUT US</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
+          グリーンエネルギー・<br />
+          <span class="gradient-text">スマートモビリティ・</span><br />
+          イノベーション
+        </h2>
+        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+          E電株式会社は「スマート充電技術および持続可能なエネルギーソリューションに特化する総合テクノロジー企業」として、低炭素社会の実現を目指しています。
+        </p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-8">
+          私たちは、充電インフラの普及からIoTデータ活用まで、エネルギーの「充電」を軸に、社会が必要とする革新的サービスを提供し続けます。
+        </p>
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-gray-100">
+          {[
+            { label: '理念', value: 'グリーン' },
+            { label: '技術', value: 'スマート' },
+            { label: '使命', value: '低炭素社会' },
+          ].map((v) => (
+            <div>
+              <p class="text-xs text-gray-400 mb-1">{v.label}</p>
+              <p class="text-primary font-semibold text-sm">{v.value}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right: company table -->
+      <div class="fade-up bg-surface rounded-lg p-8">
+        <h3 class="text-lg font-bold text-gray-900 mb-6">会社概要</h3>
+        <table class="w-full text-sm">
+          <tbody class="divide-y divide-gray-100">
+            {[
+              { label: '会社名', value: 'E電株式会社' },
+              { label: '代表者', value: '田村 俊熙' },
+              { label: '所在地', value: '〒101-0031\n東京都千代田区東神田1-3-2\nBIGS東神田3F' },
+              { label: '電話番号', value: '080-3726-2723' },
+              { label: 'メール', value: 'edian3399@gmail.com' },
+              { label: '事業内容', value: 'スマート充電・IoT・エネルギーソリューション' },
+            ].map((row) => (
+              <tr>
+                <td class="py-3 pr-4 text-gray-400 text-xs whitespace-nowrap w-28">{row.label}</td>
+                <td class="py-3 text-gray-700 font-medium text-xs leading-relaxed whitespace-pre-line">{row.value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,65 @@
+---
+const interiorServices = [
+  { title: '住宅内装工事', desc: '新築・リフォーム問わず、住まいの内装を丁寧に施工します。壁・床・天井のあらゆる工事に対応。' },
+  { title: '店舗・商業施設', desc: '飲食店・小売店・サロンなど、コンセプトに合わせた内装デザインと施工を提供します。' },
+  { title: 'オフィス改装', desc: '働きやすく機能的なオフィス空間を実現。デザイン性と実用性を兼ね備えた施工を行います。' },
+  { title: '内装リノベーション', desc: '既存空間を生まれ変わらせるリノベーション工事。価値ある空間づくりをサポートします。' },
+];
+
+const itServices = [
+  { title: 'Webシステム開発', desc: '業務系Webアプリ・管理システム・ECサイトなど、ニーズに合わせたシステムを開発します。' },
+  { title: 'スマートフォンアプリ', desc: 'iOSおよびAndroid向けアプリ開発。UXを重視したモバイル体験を提供します。' },
+  { title: 'DX・業務効率化', desc: '業務プロセスのデジタル化・自動化により、生産性向上と人的コストの削減を実現します。' },
+  { title: 'ITコンサルティング', desc: 'IT戦略の立案からシステム選定・導入サポートまで、総合的なITコンサルを提供します。' },
+];
+---
+<section id="services" class="py-24 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section header -->
+    <div class="text-center mb-20 fade-up">
+      <span class="section-label mb-3 block">SERVICES</span>
+      <h2 class="text-3xl md:text-4xl font-black text-ink mb-4">事業内容</h2>
+      <p class="text-gray-500 text-sm">内装工事とITの2つの専門性で、空間と業務の両方を変革します。</p>
+    </div>
+
+    <!-- Interior -->
+    <div class="mb-16">
+      <div class="flex items-center gap-4 mb-8 fade-up">
+        <div class="w-1 h-8 bg-craft rounded-full"></div>
+        <div>
+          <h3 class="text-ink font-black text-xl">内装工事事業</h3>
+          <p class="text-craft text-xs tracking-wider">INTERIOR CONSTRUCTION</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {interiorServices.map((s, i) => (
+          <div class="fade-up border-l-4 border-craft bg-craft-50 p-6 hover:shadow-md transition-shadow"
+            style={`transition-delay: ${i * 80}ms`}>
+            <h4 class="text-ink font-bold text-sm mb-2">{s.title}</h4>
+            <p class="text-gray-600 text-xs leading-relaxed">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- IT -->
+    <div>
+      <div class="flex items-center gap-4 mb-8 fade-up">
+        <div class="w-1 h-8 bg-ink rounded-full"></div>
+        <div>
+          <h3 class="text-ink font-black text-xl">ITソリューション事業</h3>
+          <p class="text-ink/40 text-xs tracking-wider">IT SOLUTIONS</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {itServices.map((s, i) => (
+          <div class="fade-up border-l-4 border-ink bg-gray-50 p-6 hover:shadow-md transition-shadow"
+            style={`transition-delay: ${i * 80}ms`}>
+            <h4 class="text-ink font-bold text-sm mb-2">{s.title}</h4>
+            <p class="text-gray-600 text-xs leading-relaxed">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
