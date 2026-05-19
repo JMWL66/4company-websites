@@ -14,22 +14,34 @@
       <div class="fade-up">
         <p class="section-label mb-6">PRESIDENT'S MESSAGE</p>
         <h3 class="font-serif text-2xl font-light text-white mb-6 leading-relaxed">
-          誠実さと革新で、<br />
-          <span class="text-gradient-gold">新たな価値を創造する。</span>
+          信頼と品質で、<br />
+          <span class="text-gradient-gold">世界を繋ぐ。</span>
         </h3>
         <div class="space-y-4 text-white/50 text-sm font-sans font-light leading-relaxed">
           <p>
-            当社は、変化の激しい経営環境において、常にお客様の課題に真摯に向き合い、最適なソリューションを提供することを使命としています。
+            東海株式会社は、2025年の設立以来、沈香・大理石・家具などの高品質商品の日本への輸入・販売に従事してまいりました。
           </p>
           <p>
-            創業以来、誠実さを基軸に置き、イノベーションと実行力によって企業価値を高め続けてまいりました。
-            これからも時代の変化に対応しながら、持続可能な成長を実現してまいります。
+            「信頼」「品質」「革新」を企業理念とし、30年以上にわたる経験と実績により、世界各国との強固なパートナーシップを築き、日本と世界を結ぶ架け橋としての役割を果たしています。
           </p>
+        </div>
+        <!-- Philosophy pillars -->
+        <div class="mt-8 grid grid-cols-3 gap-4 pt-6 border-t border-gold/20">
+          {[
+            { ja: '信頼', desc: '長期的なパートナーシップ' },
+            { ja: '品質', desc: '厳格な品質管理' },
+            { ja: '革新', desc: '常に進化するサービス' },
+          ].map((v) => (
+            <div class="text-center">
+              <p class="text-gradient-gold font-serif text-lg mb-1">{v.ja}</p>
+              <p class="text-white/30 text-xs leading-relaxed">{v.desc}</p>
+            </div>
+          ))}
         </div>
         <div class="mt-8 pt-6 border-t border-gold/20">
           <p class="text-white/30 text-xs tracking-wider">代表取締役</p>
-          <p class="text-white font-serif text-xl mt-1">山口 結愛</p>
-          <p class="text-gold/60 text-xs tracking-widest mt-1">YAMAGUCHI YUINA</p>
+          <p class="text-white font-serif text-xl mt-1">黄 开国</p>
+          <p class="text-gold/60 text-xs tracking-widest mt-1">HUANG KAIGUO</p>
         </div>
       </div>
 
@@ -40,12 +52,12 @@
           <tbody>
             {[
               { label: '会社名', value: '東海株式会社' },
-              { label: '代表取締役', value: '山口 結愛' },
-              { label: '設立', value: '—' },
+              { label: '代表取締役', value: '黄 开国' },
+              { label: '設立', value: '2025年' },
               { label: '所在地', value: '〒170-0013\n東京都豊島区東池袋1丁目31番17号\nドミール池袋606' },
-              { label: '電話番号', value: '03-6681-9915' },
+              { label: '最寄り駅', value: 'JR池袋駅 徒歩10分' },
               { label: 'メール', value: 'info@tokaikk.jp' },
-              { label: '事業内容', value: '総合商社・コンサルティング・投資・不動産' },
+              { label: '事業内容', value: '沈香・大理石・家具の輸入販売' },
             ].map((row) => (
               <tr class="border-b border-white/5 group hover:bg-white/[0.02] transition-colors">
                 <td class="py-4 pr-6 text-gold/70 text-xs tracking-wider whitespace-nowrap w-32">{row.label}</td>
