@@ -5,80 +5,56 @@ import Footer from '../components/Footer.astro';
 
 const jinko = [
   {
-    name: 'ウード沈香 天然盤香・卧香',
-    sub: 'Oud Agarwood Coil Incense',
-    spec: '2缶×15枚 ＋ 銅製香炉',
-    desc: '中式伝統の天然盤香。ゆっくりと燃え広がる香りで、心身をリラックスさせるアロマギフトセット。',
-  },
-  {
     name: '紅土水沈香 線香',
     sub: 'Red Earth Agarwood Stick',
     spec: '10g × 210mm ＋ 銅製香立て',
     desc: '天然高油老料を使用した高級線香。消臭・アロマ効果に優れ、室内空間を上品に演出します。',
+    img: '/products/jinko-1.png',
   },
   {
     name: 'ウード沈香 精美ギフトセット',
     sub: 'Oud Agarwood Gift Set',
     spec: '2筒×10g×210mm ＋ 木製香立て',
     desc: '中式伝統天然香の精美ギフトセット。贈り物として最適な、長時間持続する深い香り。',
+    img: '/products/jinko-2.png',
   },
   {
-    name: 'ニャチャン沈香 天然盤香',
-    sub: 'Nha Trang Agarwood Coil',
+    name: '崖庄沈香 線香セット',
+    sub: 'Cliff Agarwood Stick Set',
+    spec: '210mm 線香 ＋ 銅製香炉',
+    desc: '上質な崖庄産沈香。伝統的な香文化を尊重しながら、現代のライフスタイルにも調和します。',
+    img: '/products/jinko-3.png',
+  },
+  {
+    name: '芽庄沈香 携帯用',
+    sub: 'Nha Trang Agarwood Portable',
+    spec: '携帯用 5g ＋ 銅製香立て',
+    desc: 'ベトナム・ニャチャン産の貴重な沈香を使用した携帯用アロマ。どこでも気軽に天然香を楽しめます。',
+    img: '/products/jinko-4.png',
+  },
+  {
+    name: '芽莊祥雲 天然盤香',
+    sub: 'Nha Trang Coil Incense',
     spec: '12枚（1枚ずつ個別包装）',
-    desc: 'ベトナム・ニャチャン産の上質な沈香。無接着剤の純天然素材で、寝室・瞑想空間に最適。',
+    desc: 'ニャチャン産の無接着剤純天然盤香。渦巻き型の優雅な形で、空間をゆっくりと香りで満たします。',
+    img: '/products/jinko-5.png',
   },
   {
-    name: '牧雲 海南沈香 携帯用',
-    sub: 'Hainan Agarwood Portable',
-    spec: '携帯用 5g',
-    desc: '中国・海南島産の貴重な沈香を使用した携帯用アロマ。どこでも気軽に天然香を楽しめます。',
-  },
-  {
-    name: '天然ヨモギ養生漢方線香',
-    sub: 'Natural Mugwort Herbal Incense',
-    spec: '熟成ヨモギ 2時間 / 48枚',
-    desc: '沈香・檀香を配合した漢方線香。トイレ・玄関の消臭にも優れた効果を発揮します。',
+    name: 'ウード沈香 天然盤香セット',
+    sub: 'Oud Agarwood Coil Gift Set',
+    spec: '2缶×15枚 ＋ 銅製香炉',
+    desc: '中式伝統の天然盤香。ゆっくりと燃え広がる香りで、心身をリラックスさせるアロマギフトセット。',
+    img: '/products/jinko-6.png',
   },
 ];
 
-const marble = [
-  {
-    name: 'ヒルトングレー',
-    sub: 'Hilton Grey',
-    desc: '上品なグレートーンに繊細な白い筋が走る、モダンインテリアに最適な大理石。',
-    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop',
-  },
-  {
-    name: 'インクブルー',
-    sub: 'Ink Blue',
-    desc: '深みのあるブルーとゴールドの流れが美しい、高級感あふれる希少石材。',
-    img: 'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=600&q=80&auto=format&fit=crop',
-  },
-  {
-    name: 'スノーマウンテンブルー',
-    sub: 'Snow Mountain Blue',
-    desc: '純白の地に淡いブルーの霞がかかったような、清潔感と格調を兼ね備えた大理石。',
-    img: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80&auto=format&fit=crop',
-  },
-  {
-    name: '水墨丹青',
-    sub: 'Ink Painting',
-    desc: '水墨画を思わせるモノクロームの模様が個性的。アートとしても映える高品質石材。',
-    img: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?w=600&q=80&auto=format&fit=crop',
-  },
-  {
-    name: 'ドリス',
-    sub: 'Doris',
-    desc: '温かみのあるベージュ系のトーンに優雅な紋様。リビング・浴室など幅広い用途に対応。',
-    img: 'https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?w=600&q=80&auto=format&fit=crop',
-  },
-  {
-    name: '白玉',
-    sub: 'White Jade',
-    desc: '乳白色の透明感と滑らかな質感が特徴。玉のような光沢を持つ純粋さと優美さ。',
-    img: 'https://images.unsplash.com/photo-1567538096621-38d2284b23ff?w=600&q=80&auto=format&fit=crop',
-  },
+const marbleTypes = [
+  { name: 'ヒルトングレー', sub: 'Hilton Grey', desc: '上品なグレートーンに繊細な白い筋が走る、モダンインテリアに最適な大理石。' },
+  { name: 'インクブルー', sub: 'Ink Blue', desc: '深みのあるブルーとゴールドの流れが美しい、高級感あふれる希少石材。' },
+  { name: 'スノーマウンテンブルー', sub: 'Snow Mountain Blue', desc: '純白の地に淡いブルーの霞がかかったような、清潔感と格調を兼ね備えた大理石。' },
+  { name: '水墨丹青', sub: 'Ink Painting', desc: '水墨画を思わせるモノクロームの模様が個性的。アートとしても映える高品質石材。' },
+  { name: 'ドリス', sub: 'Doris', desc: '温かみのあるベージュ系のトーンに優雅な紋様。リビング・浴室など幅広い用途に対応。' },
+  { name: '白玉', sub: 'White Jade', desc: '乳白色の透明感と滑らかな質感が特徴。玉のような光沢を持つ純粋さと優美さ。' },
 ];
 
 const furniture = [
@@ -112,8 +88,10 @@ const furniture = [
     <!-- ====== 沈香 ====== -->
     <section id="jinko" class="py-24 px-6 bg-obsidian marble-bg">
       <div class="max-w-6xl mx-auto">
-        <div class="flex flex-col md:flex-row gap-12 items-start mb-16">
-          <div class="md:w-1/2 fade-up">
+
+        <!-- Section intro -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          <div class="fade-up">
             <p class="section-label mb-4">AGARWOOD</p>
             <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-4">沈香</h2>
             <span class="gold-line block w-12 mb-6"></span>
@@ -123,31 +101,38 @@ const furniture = [
               伝統的な香文化を尊重しながら、現代のライフスタイルにも調和する商品をご提案します。
             </p>
           </div>
-          <div class="md:w-1/2 fade-up rounded-lg overflow-hidden h-56">
+          <div class="fade-up rounded-lg overflow-hidden h-56">
             <img
-              src="https://images.unsplash.com/photo-1568526381923-caf3fd520382?w=800&q=80&auto=format&fit=crop"
+              src="/products/jinko-3.png"
               alt="沈香"
-              class="w-full h-full object-cover"
+              class="w-full h-full object-contain bg-white/[0.03]"
             />
           </div>
         </div>
 
-        <!-- Product cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Product grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
           {jinko.map((p, i) => (
             <div
-              class="fade-up p-6 rounded-lg group hover:bg-white/[0.04] transition-colors duration-300"
-              style={`background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12); transition-delay: ${i * 60}ms`}
+              class="fade-up rounded-lg overflow-hidden group"
+              style={`transition-delay: ${i * 70}ms`}
             >
-              <div class="mb-4">
-                <svg class="w-6 h-6 text-gold/50 mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
-                </svg>
-                <h3 class="text-white text-sm font-sans font-medium leading-snug mb-1">{p.name}</h3>
-                <p class="text-gold/50 text-xs tracking-wider">{p.sub}</p>
+              <!-- Product image -->
+              <div class="bg-white/[0.04] flex items-center justify-center p-6 h-52 relative overflow-hidden"
+                style="border: 1px solid rgba(201,168,76,0.12); border-bottom: none;">
+                <img
+                  src={p.img}
+                  alt={p.name}
+                  class="h-full w-full object-contain group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
-              <p class="text-white/30 text-xs mb-3 font-mono">{p.spec}</p>
-              <p class="text-white/50 text-xs font-sans font-light leading-relaxed">{p.desc}</p>
+              <!-- Product info -->
+              <div class="p-4" style="background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12); border-top: none;">
+                <h3 class="text-white text-xs font-sans font-medium leading-snug mb-0.5">{p.name}</h3>
+                <p class="text-gold/50 text-[10px] tracking-wider mb-2">{p.sub}</p>
+                <p class="text-white/30 text-[10px] font-mono mb-2">{p.spec}</p>
+                <p class="text-white/40 text-[10px] font-sans font-light leading-relaxed">{p.desc}</p>
+              </div>
             </div>
           ))}
         </div>
@@ -157,40 +142,42 @@ const furniture = [
     <!-- ====== 大理石 ====== -->
     <section id="marble" class="py-24 px-6 bg-obsidian-800">
       <div class="max-w-6xl mx-auto">
-        <div class="mb-16 fade-up">
-          <p class="section-label mb-4">MARBLE</p>
-          <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-4">大理石</h2>
-          <span class="gold-line block w-12 mb-6"></span>
-          <p class="text-white/50 text-sm font-sans font-light leading-relaxed max-w-2xl">
-            美しい大理石を厳選し、建築・インテリアプロジェクトに最適な材料を提供します。
-            天然石の美しさと耐久性を兼ね備えた商品をお届けします。
-          </p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          <div class="fade-up">
+            <p class="section-label mb-4">MARBLE</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-4">大理石</h2>
+            <span class="gold-line block w-12 mb-6"></span>
+            <p class="text-white/50 text-sm font-sans font-light leading-relaxed">
+              美しい大理石を厳選し、建築・インテリアプロジェクトに最適な材料を提供します。
+              天然石の美しさと耐久性を兼ね備えた商品をお届けします。
+              サンプル請求・カスタムカットにも対応しております。
+            </p>
+          </div>
+          <div class="fade-up rounded-lg overflow-hidden h-56">
+            <img
+              src="/products/marble-factory.png"
+              alt="大理石工場"
+              class="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {marble.map((m, i) => (
+        <!-- Marble types grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-gold/10">
+          {marbleTypes.map((m, i) => (
             <div
-              class="fade-up rounded-lg overflow-hidden group"
-              style={`transition-delay: ${i * 80}ms`}
+              class="fade-up bg-obsidian-800 p-6 hover:bg-obsidian-700 transition-colors duration-300 group"
+              style={`transition-delay: ${i * 60}ms`}
             >
-              <div class="relative h-48 overflow-hidden">
-                <img
-                  src={m.img}
-                  alt={m.name}
-                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-                <div class="absolute inset-0 border border-gold/0 group-hover:border-gold/30 transition-colors duration-500"></div>
-              </div>
-              <div class="p-5" style="background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12); border-top: none;">
-                <h3 class="text-white text-sm font-sans font-medium mb-0.5">{m.name}</h3>
-                <p class="text-gold/50 text-xs tracking-wider mb-3">{m.sub}</p>
-                <p class="text-white/40 text-xs font-sans font-light leading-relaxed">{m.desc}</p>
-              </div>
+              <div class="w-8 h-1 bg-gold/30 mb-4 group-hover:bg-gold/70 transition-colors"></div>
+              <h3 class="text-white text-sm font-sans font-medium mb-0.5">{m.name}</h3>
+              <p class="text-gold/50 text-xs tracking-wider mb-3">{m.sub}</p>
+              <p class="text-white/40 text-xs font-sans font-light leading-relaxed">{m.desc}</p>
             </div>
           ))}
         </div>
 
-        <p class="text-white/30 text-xs text-center mt-10 font-sans">
+        <p class="text-white/25 text-xs text-center mt-8 font-sans">
           ※ 上記は一部ラインナップです。その他の品種・サイズについてはお問い合わせください。
         </p>
       </div>
@@ -199,42 +186,45 @@ const furniture = [
     <!-- ====== 家具（準備中）====== -->
     <section id="furniture" class="py-24 px-6 bg-obsidian marble-bg">
       <div class="max-w-6xl mx-auto">
-        <div class="mb-16 fade-up">
-          <p class="section-label mb-4">FURNITURE</p>
-          <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-2">
-            家具事業
-            <span class="ml-4 text-sm text-gold/50 font-sans font-light tracking-wider">準備中</span>
-          </h2>
-          <span class="gold-line block w-12 mb-6"></span>
-          <p class="text-white/50 text-sm font-sans font-light leading-relaxed max-w-2xl">
-            高品質な家具を世界各国から厳選し、日本の住宅文化に合った商品をお届けします。
-            伝統的な職人技から現代的なデザインまで、幅広いニーズにお応えします。
-          </p>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+          <div class="fade-up">
+            <p class="section-label mb-4">FURNITURE</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-2">
+              家具事業
+            </h2>
+            <p class="text-gold/50 text-xs tracking-widest mb-4 font-sans">準備中 / COMING SOON</p>
+            <span class="gold-line block w-12 mb-6"></span>
+            <p class="text-white/50 text-sm font-sans font-light leading-relaxed">
+              高品質な家具を世界各国から厳選し、日本の住宅文化に合った商品をお届けします。
+              伝統的な職人技から現代的なデザインまで、幅広いニーズにお応えします。
+            </p>
+          </div>
+          <div class="fade-up rounded-lg overflow-hidden h-64">
+            <img
+              src="/products/furniture.jpg"
+              alt="家具"
+              class="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-          <div class="rounded-lg overflow-hidden h-64 fade-up relative">
-            <img
-              src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80&auto=format&fit=crop"
-              alt="Furniture"
-              class="w-full h-full object-cover opacity-60"
-            />
-            <div class="absolute inset-0 flex items-center justify-center">
-              <p class="text-white/50 font-serif text-xl tracking-wider">Coming Soon</p>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {furniture.map((cat, i) => (
+            <div
+              class="fade-up p-5 rounded-lg"
+              style={`background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12); transition-delay: ${i * 60}ms`}
+            >
+              <h3 class="text-gold/70 text-xs tracking-wider mb-3 font-sans font-medium">{cat.category}</h3>
+              <ul class="space-y-1.5">
+                {cat.items.map(item => (
+                  <li class="text-white/40 text-xs font-sans font-light flex items-center gap-2">
+                    <span class="w-1 h-1 rounded-full bg-gold/30 flex-shrink-0"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-          <div class="fade-up grid grid-cols-2 gap-4">
-            {furniture.map((cat) => (
-              <div class="p-5 rounded-lg" style="background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12);">
-                <h3 class="text-gold/70 text-xs tracking-wider mb-3 font-sans">{cat.category}</h3>
-                <ul class="space-y-1">
-                  {cat.items.map(item => (
-                    <li class="text-white/40 text-xs font-sans font-light">{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>
