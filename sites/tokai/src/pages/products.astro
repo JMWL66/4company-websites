@@ -1,0 +1,260 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const jinko = [
+  {
+    name: 'ウード沈香 天然盤香・卧香',
+    sub: 'Oud Agarwood Coil Incense',
+    spec: '2缶×15枚 ＋ 銅製香炉',
+    desc: '中式伝統の天然盤香。ゆっくりと燃え広がる香りで、心身をリラックスさせるアロマギフトセット。',
+  },
+  {
+    name: '紅土水沈香 線香',
+    sub: 'Red Earth Agarwood Stick',
+    spec: '10g × 210mm ＋ 銅製香立て',
+    desc: '天然高油老料を使用した高級線香。消臭・アロマ効果に優れ、室内空間を上品に演出します。',
+  },
+  {
+    name: 'ウード沈香 精美ギフトセット',
+    sub: 'Oud Agarwood Gift Set',
+    spec: '2筒×10g×210mm ＋ 木製香立て',
+    desc: '中式伝統天然香の精美ギフトセット。贈り物として最適な、長時間持続する深い香り。',
+  },
+  {
+    name: 'ニャチャン沈香 天然盤香',
+    sub: 'Nha Trang Agarwood Coil',
+    spec: '12枚（1枚ずつ個別包装）',
+    desc: 'ベトナム・ニャチャン産の上質な沈香。無接着剤の純天然素材で、寝室・瞑想空間に最適。',
+  },
+  {
+    name: '牧雲 海南沈香 携帯用',
+    sub: 'Hainan Agarwood Portable',
+    spec: '携帯用 5g',
+    desc: '中国・海南島産の貴重な沈香を使用した携帯用アロマ。どこでも気軽に天然香を楽しめます。',
+  },
+  {
+    name: '天然ヨモギ養生漢方線香',
+    sub: 'Natural Mugwort Herbal Incense',
+    spec: '熟成ヨモギ 2時間 / 48枚',
+    desc: '沈香・檀香を配合した漢方線香。トイレ・玄関の消臭にも優れた効果を発揮します。',
+  },
+];
+
+const marble = [
+  {
+    name: 'ヒルトングレー',
+    sub: 'Hilton Grey',
+    desc: '上品なグレートーンに繊細な白い筋が走る、モダンインテリアに最適な大理石。',
+    img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop',
+  },
+  {
+    name: 'インクブルー',
+    sub: 'Ink Blue',
+    desc: '深みのあるブルーとゴールドの流れが美しい、高級感あふれる希少石材。',
+    img: 'https://images.unsplash.com/photo-1541123437800-1bb1317badc2?w=600&q=80&auto=format&fit=crop',
+  },
+  {
+    name: 'スノーマウンテンブルー',
+    sub: 'Snow Mountain Blue',
+    desc: '純白の地に淡いブルーの霞がかかったような、清潔感と格調を兼ね備えた大理石。',
+    img: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&q=80&auto=format&fit=crop',
+  },
+  {
+    name: '水墨丹青',
+    sub: 'Ink Painting',
+    desc: '水墨画を思わせるモノクロームの模様が個性的。アートとしても映える高品質石材。',
+    img: 'https://images.unsplash.com/photo-1562664377-709f2c337eb2?w=600&q=80&auto=format&fit=crop',
+  },
+  {
+    name: 'ドリス',
+    sub: 'Doris',
+    desc: '温かみのあるベージュ系のトーンに優雅な紋様。リビング・浴室など幅広い用途に対応。',
+    img: 'https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?w=600&q=80&auto=format&fit=crop',
+  },
+  {
+    name: '白玉',
+    sub: 'White Jade',
+    desc: '乳白色の透明感と滑らかな質感が特徴。玉のような光沢を持つ純粋さと優美さ。',
+    img: 'https://images.unsplash.com/photo-1567538096621-38d2284b23ff?w=600&q=80&auto=format&fit=crop',
+  },
+];
+
+const furniture = [
+  { category: 'ソファ', items: ['オフィスソファ', 'リビングソファ', 'イタリアソファ'] },
+  { category: 'テーブル', items: ['オフィステーブル', 'ダイニングテーブル', 'リビングテーブル'] },
+  { category: '椅子', items: ['蝶々椅子', '毛虫椅子'] },
+  { category: 'ベッド', items: ['古典ベッド', 'イタリアベッド'] },
+];
+---
+<Layout title="製品紹介 | 東海株式会社" description="東海株式会社の製品ラインナップ。沈香・大理石・家具など、厳選した高品質商品をご紹介します。">
+  <Header />
+  <main>
+
+    <!-- Page Hero -->
+    <section class="relative h-72 md:h-96 flex items-end overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=1600&q=80&auto=format&fit=crop"
+          alt="Products"
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.5) 60%, rgba(5,5,5,0.2) 100%);"></div>
+      </div>
+      <div class="relative z-10 max-w-6xl mx-auto px-6 pb-14 w-full">
+        <p class="section-label mb-3">PRODUCTS</p>
+        <h1 class="font-serif text-3xl md:text-5xl font-light text-white mb-3">製品紹介</h1>
+        <span class="gold-line block w-12"></span>
+      </div>
+    </section>
+
+    <!-- ====== 沈香 ====== -->
+    <section id="jinko" class="py-24 px-6 bg-obsidian marble-bg">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row gap-12 items-start mb-16">
+          <div class="md:w-1/2 fade-up">
+            <p class="section-label mb-4">AGARWOOD</p>
+            <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-4">沈香</h2>
+            <span class="gold-line block w-12 mb-6"></span>
+            <p class="text-white/50 text-sm font-sans font-light leading-relaxed">
+              上質な沈香を厳選し、香道文化や心身のリラクゼーションに適した商品を提供します。
+              天然の香木が持つ奥深い香りと上品な質感を大切にし、日常生活に安らぎと豊かさをもたらします。
+              伝統的な香文化を尊重しながら、現代のライフスタイルにも調和する商品をご提案します。
+            </p>
+          </div>
+          <div class="md:w-1/2 fade-up rounded-lg overflow-hidden h-56">
+            <img
+              src="https://images.unsplash.com/photo-1568526381923-caf3fd520382?w=800&q=80&auto=format&fit=crop"
+              alt="沈香"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Product cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {jinko.map((p, i) => (
+            <div
+              class="fade-up p-6 rounded-lg group hover:bg-white/[0.04] transition-colors duration-300"
+              style={`background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12); transition-delay: ${i * 60}ms`}
+            >
+              <div class="mb-4">
+                <svg class="w-6 h-6 text-gold/50 mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z"/>
+                </svg>
+                <h3 class="text-white text-sm font-sans font-medium leading-snug mb-1">{p.name}</h3>
+                <p class="text-gold/50 text-xs tracking-wider">{p.sub}</p>
+              </div>
+              <p class="text-white/30 text-xs mb-3 font-mono">{p.spec}</p>
+              <p class="text-white/50 text-xs font-sans font-light leading-relaxed">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== 大理石 ====== -->
+    <section id="marble" class="py-24 px-6 bg-obsidian-800">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-16 fade-up">
+          <p class="section-label mb-4">MARBLE</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-4">大理石</h2>
+          <span class="gold-line block w-12 mb-6"></span>
+          <p class="text-white/50 text-sm font-sans font-light leading-relaxed max-w-2xl">
+            美しい大理石を厳選し、建築・インテリアプロジェクトに最適な材料を提供します。
+            天然石の美しさと耐久性を兼ね備えた商品をお届けします。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {marble.map((m, i) => (
+            <div
+              class="fade-up rounded-lg overflow-hidden group"
+              style={`transition-delay: ${i * 80}ms`}
+            >
+              <div class="relative h-48 overflow-hidden">
+                <img
+                  src={m.img}
+                  alt={m.name}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div class="absolute inset-0 border border-gold/0 group-hover:border-gold/30 transition-colors duration-500"></div>
+              </div>
+              <div class="p-5" style="background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12); border-top: none;">
+                <h3 class="text-white text-sm font-sans font-medium mb-0.5">{m.name}</h3>
+                <p class="text-gold/50 text-xs tracking-wider mb-3">{m.sub}</p>
+                <p class="text-white/40 text-xs font-sans font-light leading-relaxed">{m.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-white/30 text-xs text-center mt-10 font-sans">
+          ※ 上記は一部ラインナップです。その他の品種・サイズについてはお問い合わせください。
+        </p>
+      </div>
+    </section>
+
+    <!-- ====== 家具（準備中）====== -->
+    <section id="furniture" class="py-24 px-6 bg-obsidian marble-bg">
+      <div class="max-w-6xl mx-auto">
+        <div class="mb-16 fade-up">
+          <p class="section-label mb-4">FURNITURE</p>
+          <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-2">
+            家具事業
+            <span class="ml-4 text-sm text-gold/50 font-sans font-light tracking-wider">準備中</span>
+          </h2>
+          <span class="gold-line block w-12 mb-6"></span>
+          <p class="text-white/50 text-sm font-sans font-light leading-relaxed max-w-2xl">
+            高品質な家具を世界各国から厳選し、日本の住宅文化に合った商品をお届けします。
+            伝統的な職人技から現代的なデザインまで、幅広いニーズにお応えします。
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div class="rounded-lg overflow-hidden h-64 fade-up relative">
+            <img
+              src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80&auto=format&fit=crop"
+              alt="Furniture"
+              class="w-full h-full object-cover opacity-60"
+            />
+            <div class="absolute inset-0 flex items-center justify-center">
+              <p class="text-white/50 font-serif text-xl tracking-wider">Coming Soon</p>
+            </div>
+          </div>
+          <div class="fade-up grid grid-cols-2 gap-4">
+            {furniture.map((cat) => (
+              <div class="p-5 rounded-lg" style="background: rgba(201,168,76,0.04); border: 1px solid rgba(201,168,76,0.12);">
+                <h3 class="text-gold/70 text-xs tracking-wider mb-3 font-sans">{cat.category}</h3>
+                <ul class="space-y-1">
+                  {cat.items.map(item => (
+                    <li class="text-white/40 text-xs font-sans font-light">{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 px-6 bg-obsidian-800 text-center">
+      <div class="max-w-xl mx-auto fade-up">
+        <p class="section-label mb-4">CONTACT</p>
+        <h2 class="font-serif text-2xl md:text-3xl font-light text-white mb-4">
+          製品・仕入れについてのご相談
+        </h2>
+        <span class="gold-line block w-12 mx-auto mb-6"></span>
+        <p class="text-white/40 text-sm font-sans font-light mb-8">
+          サンプル請求・価格見積もり・カスタムオーダーなど、<br class="hidden sm:block"/>
+          お気軽にお問い合わせください。
+        </p>
+        <a href="/#contact" class="btn-gold-filled inline-block">お問い合わせ</a>
+      </div>
+    </section>
+
+  </main>
+  <Footer />
+</Layout>

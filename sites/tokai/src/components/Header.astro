@@ -1,9 +1,10 @@
 ---
 const navItems = [
-  { label: 'HOME', href: '#home' },
-  { label: '事業内容', href: '#services' },
-  { label: '会社概要', href: '#about' },
-  { label: 'お問い合わせ', href: '#contact' },
+  { label: 'HOME', href: '/' },
+  { label: '事業内容', href: '/#services' },
+  { label: '製品紹介', href: '/products' },
+  { label: '会社概要', href: '/#about' },
+  { label: 'お問い合わせ', href: '/#contact' },
 ];
 ---
 <header
@@ -13,7 +14,7 @@ const navItems = [
 >
   <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
     <!-- Logo -->
-    <a href="#home" class="flex items-center gap-3 group">
+    <a href="/" class="flex items-center gap-3 group">
       <img src="/logo.png" alt="東海株式会社" class="h-10 w-auto" />
       <div class="hidden sm:block">
         <p class="text-gold text-xs tracking-widest font-sans">TOKAI</p>

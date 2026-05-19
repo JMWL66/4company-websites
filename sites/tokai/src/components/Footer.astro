@@ -7,14 +7,16 @@
       <span class="text-white/30 text-xs tracking-wider">東海株式会社</span>
     </div>
     <nav class="flex gap-6">
-      {['事業内容', '会社概要', 'お問い合わせ'].map((item, i) => {
-        const hrefs = ['#services', '#about', '#contact'];
-        return (
-          <a href={hrefs[i]} class="text-white/30 hover:text-gold/70 text-xs tracking-wider transition-colors">
-            {item}
-          </a>
-        );
-      })}
+      {[
+        { label: '事業内容', href: '/#services' },
+        { label: '製品紹介', href: '/products' },
+        { label: '会社概要', href: '/#about' },
+        { label: 'お問い合わせ', href: '/#contact' },
+      ].map((item) => (
+        <a href={item.href} class="text-white/30 hover:text-gold/70 text-xs tracking-wider transition-colors">
+          {item.label}
+        </a>
+      ))}
     </nav>
     <p class="text-white/20 text-xs">© 2025 東海株式会社. All Rights Reserved.</p>
   </div>
