@@ -3,57 +3,76 @@ const services = [
   {
     num: '01',
     title: '総合商社事業',
-    sub: 'General Trading',
+    en: 'General Trading',
     desc: '国内外の多様な産業・市場において、卓越した調達力と流通ネットワークを活かし、付加価値の高い商取引を展開しています。',
+    img: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80&auto=format&fit=crop',
   },
   {
     num: '02',
     title: 'コンサルティング事業',
-    sub: 'Consulting',
+    en: 'Consulting',
     desc: '経営戦略の立案から実行支援まで、豊富な知見と独自の分析手法によりクライアント企業の持続的成長を実現します。',
+    img: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&q=80&auto=format&fit=crop',
   },
   {
     num: '03',
     title: '投資・ファイナンス',
-    sub: 'Investment & Finance',
+    en: 'Investment & Finance',
     desc: '長期的な視野に基づいた戦略的投資により、持続可能な資産形成と企業価値の最大化をサポートします。',
+    img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=600&q=80&auto=format&fit=crop',
   },
   {
     num: '04',
     title: '不動産事業',
-    sub: 'Real Estate',
+    en: 'Real Estate',
     desc: '首都圏を中心とした優良不動産の開発・運用・管理を通じ、安定した価値と住・商空間の品質向上を追求します。',
+    img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80&auto=format&fit=crop',
   },
 ];
 ---
 <section id="services" class="py-28 px-6 bg-obsidian-800 relative overflow-hidden">
   <div class="max-w-6xl mx-auto">
     <!-- Section header -->
-    <div class="mb-20 fade-up">
-      <p class="section-label mb-4">OUR BUSINESS</p>
-      <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-4">
-        事業内容
-      </h2>
-      <span class="gold-line block w-12"></span>
+    <div class="mb-20 fade-up flex items-end justify-between gap-4 flex-wrap">
+      <div>
+        <p class="section-label mb-4">OUR BUSINESS</p>
+        <h2 class="font-serif text-3xl md:text-4xl font-light text-white mb-4">事業内容</h2>
+        <span class="gold-line block w-12"></span>
+      </div>
+      <p class="text-white/30 text-sm font-sans font-light max-w-xs text-right hidden md:block">
+        多角的な事業展開で、持続可能な価値を創造します
+      </p>
     </div>
 
-    <!-- Services grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-gold/10">
+    <!-- Services grid with images -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       {services.map((s, i) => (
         <div
-          class="fade-up bg-obsidian-800 p-10 hover:bg-obsidian-700 transition-colors duration-300 group"
-          style={`transition-delay: ${i * 100}ms`}
+          class="fade-up relative rounded-lg overflow-hidden group h-72"
+          style={`transition-delay: ${i * 80}ms`}
         >
-          <p class="text-gold/40 font-display text-5xl font-light mb-6 group-hover:text-gold/70 transition-colors">
-            {s.num}
-          </p>
-          <div class="gold-border-left mb-4">
-            <h3 class="text-white text-lg font-sans font-medium">{s.title}</h3>
-            <p class="text-gold/60 text-xs tracking-wider mt-1">{s.sub}</p>
+          <!-- Background image -->
+          <img src={s.img} alt={s.title}
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          <!-- Gradient overlay -->
+          <div class="absolute inset-0"
+            style="background: linear-gradient(to top, rgba(5,5,5,0.95) 0%, rgba(5,5,5,0.6) 50%, rgba(5,5,5,0.2) 100%);"></div>
+          <!-- Gold accent border on hover -->
+          <div class="absolute inset-0 border border-gold/0 group-hover:border-gold/30 rounded-lg transition-colors duration-500"></div>
+
+          <!-- Content -->
+          <div class="absolute inset-0 p-8 flex flex-col justify-end">
+            <p class="text-gold/50 font-serif text-4xl font-light mb-2 group-hover:text-gold/80 transition-colors">
+              {s.num}
+            </p>
+            <div class="gold-border-left mb-3">
+              <h3 class="text-white text-xl font-sans font-medium">{s.title}</h3>
+              <p class="text-gold/60 text-xs tracking-wider mt-0.5">{s.en}</p>
+            </div>
+            <p class="text-white/50 text-sm font-sans font-light leading-relaxed">
+              {s.desc}
+            </p>
           </div>
-          <p class="text-white/50 text-sm font-sans font-light leading-relaxed">
-            {s.desc}
-          </p>
         </div>
       ))}
     </div>

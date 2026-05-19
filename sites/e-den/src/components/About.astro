@@ -2,55 +2,102 @@
 ---
 <section id="about" class="py-24 px-6 bg-white">
   <div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      <!-- Left: vision -->
+
+    <!-- Philosophy banner -->
+    <div class="rounded-2xl overflow-hidden mb-20 fade-up relative">
+      <img
+        src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=1600&q=80&auto=format&fit=crop"
+        alt="Office"
+        class="w-full h-64 md:h-80 object-cover"
+      />
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-center px-6"
+        style="background: linear-gradient(135deg, rgba(0,50,100,0.88), rgba(0,80,40,0.82));">
+        <p class="text-accent text-xs tracking-widest mb-4 font-medium">PHILOSOPHY</p>
+        <h2 class="text-white text-2xl md:text-4xl font-bold mb-4 leading-tight">
+          誠実・実践・高品質・高効率
+        </h2>
+        <p class="text-white/70 text-sm max-w-xl leading-relaxed">
+          「革新と前進」の精神で先進設備を導入し、生産管理と品質管理を強化することで、<br class="hidden md:block"/>
+          安定した品質と迅速な納期、競争力ある価格を実現します。
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <!-- Left: Vision text -->
       <div class="fade-up">
         <span class="section-label mb-4 block">ABOUT US</span>
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
           グリーンエネルギー・<br />
-          <span class="gradient-text">スマートモビリティ・</span><br />
-          イノベーション
+          <span class="gradient-text">スマートモビリティの</span><br />
+          パイオニアへ
         </h2>
-        <p class="text-gray-600 text-sm leading-relaxed mb-6">
-          E電株式会社は「スマート充電技術および持続可能なエネルギーソリューションに特化する総合テクノロジー企業」として、低炭素社会の実現を目指しています。
-        </p>
-        <p class="text-gray-600 text-sm leading-relaxed mb-8">
-          私たちは、充電インフラの普及からIoTデータ活用まで、エネルギーの「充電」を軸に、社会が必要とする革新的サービスを提供し続けます。
-        </p>
-        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-gray-100">
+        <div class="space-y-4 text-gray-600 text-sm leading-relaxed">
+          <p>
+            E電株式会社は、スマート充電技術および持続可能なエネルギーソリューションに特化する総合テクノロジー企業として、2025年に設立されました。
+          </p>
+          <p>
+            充電インフラの普及からIoTデータ活用まで、エネルギーの「充電」を軸に、カーボンニュートラル社会の実現に向けた革新的サービスを提供し続けます。
+          </p>
+          <p>
+            各方面の皆様に誠意をもって貢献することを使命とし、日本のEVインフラ整備と脱炭素化をリードしてまいります。
+          </p>
+        </div>
+
+        <div class="mt-8 grid grid-cols-3 gap-4 pt-6 border-t border-gray-100">
           {[
-            { label: '理念', value: 'グリーン' },
-            { label: '技術', value: 'スマート' },
-            { label: '使命', value: '低炭素社会' },
+            { label: '設立', value: '2025年6月' },
+            { label: '資本金', value: '700万円' },
+            { label: '事業領域', value: '8分野' },
           ].map((v) => (
-            <div>
-              <p class="text-xs text-gray-400 mb-1">{v.label}</p>
-              <p class="text-primary font-semibold text-sm">{v.value}</p>
+            <div class="text-center">
+              <p class="gradient-text text-2xl font-bold">{v.value}</p>
+              <p class="text-gray-400 text-xs mt-1">{v.label}</p>
             </div>
           ))}
         </div>
       </div>
 
-      <!-- Right: company table -->
-      <div class="fade-up bg-surface rounded-lg p-8">
-        <h3 class="text-lg font-bold text-gray-900 mb-6">会社概要</h3>
-        <table class="w-full text-sm">
-          <tbody class="divide-y divide-gray-100">
-            {[
-              { label: '会社名', value: 'E電株式会社' },
-              { label: '代表者', value: '田村 俊熙' },
-              { label: '所在地', value: '〒101-0031\n東京都千代田区東神田1-3-2\nBIGS東神田3F' },
-              { label: '電話番号', value: '080-3726-2723' },
-              { label: 'メール', value: 'edian3399@gmail.com' },
-              { label: '事業内容', value: 'スマート充電・IoT・エネルギーソリューション' },
-            ].map((row) => (
-              <tr>
-                <td class="py-3 pr-4 text-gray-400 text-xs whitespace-nowrap w-28">{row.label}</td>
-                <td class="py-3 text-gray-700 font-medium text-xs leading-relaxed whitespace-pre-line">{row.value}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <!-- Right: Company table + CEO image -->
+      <div class="fade-up space-y-6">
+        <!-- CEO card -->
+        <div class="rounded-xl overflow-hidden border border-gray-100 flex items-center gap-6 p-6"
+          style="background: linear-gradient(135deg, #f0f9ff, #f0fff4);">
+          <div class="w-16 h-16 rounded-full flex-shrink-0 overflow-hidden bg-primary/10 flex items-center justify-center">
+            <svg class="w-8 h-8 text-primary/50" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="text-gray-400 text-xs mb-1">代表取締役</p>
+            <p class="text-gray-900 font-bold text-lg">田村 俊熙</p>
+            <p class="text-primary text-xs tracking-wider">TAMURA JUNKI</p>
+          </div>
+        </div>
+
+        <!-- Company table -->
+        <div class="bg-surface rounded-xl p-6">
+          <h3 class="text-lg font-bold text-gray-900 mb-4">会社概要</h3>
+          <table class="w-full text-sm">
+            <tbody class="divide-y divide-gray-100">
+              {[
+                { label: '会社名', value: 'E電株式会社' },
+                { label: '代表取締役', value: '田村 俊熙' },
+                { label: '設立', value: '2025年6月' },
+                { label: '資本金', value: '700万円' },
+                { label: '所在地', value: '〒101-0031\n東京都千代田区東神田1-3-2\nBIGS東神田3F' },
+                { label: '電話番号', value: '080-3726-2723' },
+                { label: 'メール', value: 'edian3399@gmail.com' },
+                { label: '事業内容', value: 'スマート充電・IoT・エネルギーソリューション' },
+              ].map((row) => (
+                <tr>
+                  <td class="py-3 pr-4 text-gray-400 text-xs whitespace-nowrap w-28">{row.label}</td>
+                  <td class="py-3 text-gray-700 font-medium text-xs leading-relaxed whitespace-pre-line">{row.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
