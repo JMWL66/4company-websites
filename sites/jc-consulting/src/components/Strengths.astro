@@ -1,39 +1,66 @@
 ---
 const strengths = [
   {
-    iconHtml: `<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>`,
+    num: '01',
+    iconHtml: `<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"/></svg>`,
     title: '本質的な課題解決',
-    desc: '表面的な症状ではなく、経営課題の根本原因を特定し、持続可能な解決策を提供します。',
+    en: 'Root Cause Analysis',
+    desc: '表面的な症状ではなく、経営課題の根本原因を特定し、データドリブンに持続可能な解決策を設計します。',
   },
   {
-    iconHtml: `<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>`,
+    num: '02',
+    iconHtml: `<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>`,
     title: 'スピードと柔軟性',
-    desc: '大手ファームにはない機動力と柔軟な対応で、スピーディーに成果を出すことを重視します。',
+    en: 'Agile & Flexible',
+    desc: '大手ファームにはない機動力と柔軟な対応で、最短ルートで成果へ到達することにコミットします。',
   },
   {
-    iconHtml: `<svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>`,
+    num: '03',
+    iconHtml: `<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>`,
     title: '伴走型サポート',
-    desc: '提案で終わらず、実行フェーズまで寄り添い、クライアントと共に成果を実現します。',
+    en: 'End-to-End Partner',
+    desc: '提案で終わらせず、実行・定着フェーズまで寄り添い、クライアントと共に成果を実現します。',
   },
 ];
 ---
-<section id="strengths" class="py-24 px-6 bg-navy">
-  <div class="max-w-6xl mx-auto">
-    <div class="text-center mb-16 fade-up">
-      <span class="text-orange text-xs tracking-widest font-medium uppercase mb-3 block">WHY JC</span>
-      <h2 class="text-3xl md:text-4xl font-black text-white mb-4">JCコンサルティングの強み</h2>
+<section id="strengths" class="relative py-32 px-6 overflow-hidden">
+  <!-- ambient glow -->
+  <div class="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full"
+       style="background: radial-gradient(circle, rgba(245,130,31,0.15) 0%, transparent 70%); filter: blur(80px);" aria-hidden="true"></div>
+  <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full"
+       style="background: radial-gradient(circle, rgba(56,189,248,0.1) 0%, transparent 70%); filter: blur(80px);" aria-hidden="true"></div>
+
+  <div class="relative max-w-7xl mx-auto">
+    <div class="text-center mb-20 fade-up">
+      <span class="section-label mb-5 inline-flex">WHY JC / 選ばれる理由</span>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+        <span class="gradient-text-cool">差別化を支える、</span><br/>
+        <span class="gradient-text">3つのコア・バリュー。</span>
+      </h2>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
       {strengths.map((s, i) => (
         <div
-          class="fade-up text-center p-8 rounded-lg"
-          style={`background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); transition-delay: ${i * 100}ms`}
+          class="fade-up glass-card p-10 group relative overflow-hidden hover:-translate-y-2 transition-all duration-500"
+          style={`transition-delay: ${i * 120}ms`}
         >
-          <div class="flex justify-center mb-4 text-orange">
-            <Fragment set:html={s.iconHtml} />
+          <!-- big number watermark -->
+          <span class="absolute -top-6 -right-2 font-display text-[10rem] font-black leading-none pointer-events-none select-none"
+                style="color: rgba(245,130,31,0.04);">{s.num}</span>
+
+          <div class="relative">
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center text-orange mb-8 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3"
+                 style="background: linear-gradient(135deg, rgba(245,130,31,0.15), rgba(245,130,31,0.05)); border: 1px solid rgba(245,130,31,0.25);">
+              <Fragment set:html={s.iconHtml} />
+            </div>
+
+            <p class="font-mono-tech text-orange/70 text-[10px] tracking-[0.3em] mb-2">{s.en}</p>
+            <h3 class="font-display text-white font-bold text-2xl mb-4">{s.title}</h3>
+            <p class="text-white/55 text-sm leading-relaxed">{s.desc}</p>
+
+            <div class="mt-8 h-px w-12 bg-gradient-to-r from-orange to-transparent group-hover:w-full transition-all duration-700"></div>
           </div>
-          <h3 class="text-white font-bold text-lg mb-3">{s.title}</h3>
-          <p class="text-white/50 text-sm leading-relaxed">{s.desc}</p>
         </div>
       ))}
     </div>

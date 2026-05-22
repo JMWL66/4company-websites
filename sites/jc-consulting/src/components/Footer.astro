@@ -1,16 +1,49 @@
 ---
 ---
-<footer class="bg-navy-900 py-10 px-6">
-  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-    <div class="flex items-center gap-3">
-      <img src="/logo.png" alt="JCコンサルティング" class="h-8 w-auto" />
-      <span class="text-white/40 text-xs">株式会社JCコンサルティング</span>
+<footer class="relative py-16 px-6 overflow-hidden" style="border-top: 1px solid rgba(255,255,255,0.05);">
+  <div class="absolute inset-0 border-grid-fine opacity-30" aria-hidden="true"></div>
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-px"
+       style="background: linear-gradient(90deg, transparent, rgba(245,130,31,0.5), transparent);"></div>
+
+  <div class="relative max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start mb-12">
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <img src="/logo.png" alt="JCコンサルティング" class="h-9 w-auto" />
+          <div>
+            <p class="font-display text-white font-bold text-sm leading-none">JC Consulting</p>
+            <p class="font-mono-tech text-orange text-[9px] tracking-[0.3em] mt-1">株式会社</p>
+          </div>
+        </div>
+        <p class="text-white/40 text-xs leading-relaxed max-w-xs">
+          経営戦略から実行まで、本質的な経営課題の解決を支援するコンサルティングファーム。
+        </p>
+      </div>
+
+      <div>
+        <p class="font-mono-tech text-white/30 text-[10px] tracking-[0.3em] mb-4">NAVIGATION</p>
+        <nav class="grid grid-cols-2 gap-2">
+          {[['サービス','#services'],['強み','#strengths'],['会社概要','#about'],['お問い合わせ','#contact']].map(([label,href]) => (
+            <a href={href} class="text-white/50 hover:text-orange text-xs transition-colors">{label}</a>
+          ))}
+        </nav>
+      </div>
+
+      <div>
+        <p class="font-mono-tech text-white/30 text-[10px] tracking-[0.3em] mb-4">CONTACT</p>
+        <p class="text-white/50 text-xs leading-relaxed">
+          〒101-0031<br/>東京都千代田区東神田1-3-2<br/>BIGS東神田5階
+        </p>
+        <a href="mailto:jc.ceo.yamaguchi@gmail.com" class="text-orange hover:underline text-xs mt-2 inline-block font-mono-tech">
+          jc.ceo.yamaguchi@gmail.com
+        </a>
+      </div>
     </div>
-    <nav class="flex gap-6">
-      {[['サービス','#services'],['強み','#strengths'],['会社概要','#about'],['お問い合わせ','#contact']].map(([label,href]) => (
-        <a href={href} class="text-white/40 hover:text-orange text-xs transition-colors">{label}</a>
-      ))}
-    </nav>
-    <p class="text-white/20 text-xs">© 2025 株式会社JCコンサルティング. All Rights Reserved.</p>
+
+    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
+         style="border-top: 1px solid rgba(255,255,255,0.05);">
+      <p class="font-mono-tech text-white/30 text-[10px] tracking-wider">© 2025 株式会社JCコンサルティング. ALL RIGHTS RESERVED.</p>
+      <p class="font-mono-tech text-white/20 text-[10px] tracking-wider">CRAFTED WITH PRECISION</p>
+    </div>
   </div>
 </footer>

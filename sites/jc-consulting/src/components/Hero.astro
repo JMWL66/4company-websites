@@ -1,54 +1,136 @@
 ---
 ---
-<section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-navy-900">
-  <!-- Diagonal accent shape -->
-  <div class="absolute right-0 top-0 h-full w-1/2 opacity-20 hidden lg:block" aria-hidden="true"
-    style="background: linear-gradient(135deg, transparent 0%, #F5821F 100%); clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);"></div>
-  <!-- Dot grid -->
-  <div class="absolute inset-0 opacity-5"
-    style="background-image: radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px); background-size: 32px 32px;" aria-hidden="true"></div>
+<section id="home" class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+  <!-- Animated background layers -->
+  <div class="absolute inset-0 border-grid mask-fade" aria-hidden="true"></div>
 
-  <div class="relative z-10 max-w-6xl mx-auto px-6 py-20">
-    <div class="max-w-2xl">
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
-        style="background: rgba(245,130,31,0.15); border: 1px solid rgba(245,130,31,0.3);">
-        <span class="w-2 h-2 rounded-full bg-orange"></span>
-        <span class="text-orange text-xs tracking-wider font-medium">JC CONSULTING</span>
+  <!-- Glow orbs -->
+  <div class="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full animate-orb"
+       style="background: radial-gradient(circle, rgba(245,130,31,0.35) 0%, transparent 60%); filter: blur(60px);" aria-hidden="true"></div>
+  <div class="absolute -bottom-40 right-0 w-[500px] h-[500px] rounded-full animate-orb"
+       style="background: radial-gradient(circle, rgba(56,189,248,0.18) 0%, transparent 60%); filter: blur(60px); animation-delay: -6s;" aria-hidden="true"></div>
+
+  <!-- Diagonal accent line -->
+  <div class="absolute top-0 right-0 h-full w-px hidden lg:block" aria-hidden="true"
+       style="background: linear-gradient(180deg, transparent, rgba(245,130,31,0.4) 50%, transparent);"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-20 w-full">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <!-- LEFT: Headline -->
+      <div class="lg:col-span-7">
+        <div class="inline-flex items-center gap-3 px-3 py-1.5 mb-8 rounded-full"
+             style="background: rgba(245,130,31,0.08); border: 1px solid rgba(245,130,31,0.2);">
+          <span class="w-1.5 h-1.5 rounded-full bg-orange animate-pulse-dot"></span>
+          <span class="font-mono-tech text-orange text-[10px] tracking-[0.3em] font-medium">JC_CONSULTING / EST. 2024</span>
+        </div>
+
+        <h1 class="font-display font-bold text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.95] tracking-tight mb-8">
+          <span class="block gradient-text-cool">経営の課題に、</span>
+          <span class="block gradient-text mt-2">本質的な答えを。</span>
+        </h1>
+
+        <p class="text-white/55 text-base md:text-lg font-light leading-relaxed mb-12 max-w-xl">
+          戦略立案からDX実装まで。データドリブンなアプローチで、<br class="hidden md:block"/>
+          貴社の持続的成長を次のステージへ加速させます。
+        </p>
+
+        <div class="flex flex-wrap gap-3">
+          <a href="#contact" class="btn-orange">
+            無料相談を申し込む
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+          <a href="#services" class="btn-ghost">サービスを見る</a>
+        </div>
+
+        <!-- Stats -->
+        <div class="mt-16 pt-10 grid grid-cols-3 gap-6 max-w-xl"
+             style="border-top: 1px solid rgba(255,255,255,0.08);">
+          {[
+            { num: '100%', label: 'オーダーメイド対応', sub: 'TAILORED' },
+            { num: '24h',  label: '迅速レスポンス',     sub: 'RESPONSE' },
+            { num: '∞',    label: '戦略〜実行まで',     sub: 'END-TO-END' },
+          ].map((s) => (
+            <div>
+              <p class="font-display font-bold text-3xl gradient-text leading-none">{s.num}</p>
+              <p class="text-white/70 text-xs mt-2 font-medium">{s.label}</p>
+              <p class="font-mono-tech text-white/30 text-[9px] tracking-widest mt-0.5">{s.sub}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
-      <h1 class="font-sans font-black text-4xl sm:text-5xl md:text-6xl text-white leading-tight mb-6">
-        経営の課題に、<br />
-        <span class="text-orange">本質的な答えを。</span>
-      </h1>
+      <!-- RIGHT: Tech panel -->
+      <div class="lg:col-span-5 hidden lg:block">
+        <div class="relative">
+          <!-- Floating panel -->
+          <div class="glass-card p-6 relative overflow-hidden">
+            <div class="flex items-center justify-between mb-6">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-red-500/60"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/60"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500/60"></span>
+              </div>
+              <span class="font-mono-tech text-[10px] text-white/40 tracking-widest">strategy.exec</span>
+            </div>
 
-      <p class="text-white/60 text-base font-light leading-relaxed mb-10 max-w-lg">
-        戦略立案から実行支援まで、貴社の持続的成長を<br class="hidden sm:block"/>
-        トータルサポートします。
-      </p>
+            <div class="space-y-3 font-mono-tech text-[11px]">
+              <div class="flex gap-3">
+                <span class="text-white/30">01</span>
+                <span class="text-orange">▸ analyze</span>
+                <span class="text-white/50">("market_position")</span>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-white/30">02</span>
+                <span class="text-orange">▸ design</span>
+                <span class="text-white/50">("growth_strategy")</span>
+              </div>
+              <div class="flex gap-3">
+                <span class="text-white/30">03</span>
+                <span class="text-orange">▸ execute</span>
+                <span class="text-white/50">("transformation")</span>
+              </div>
+              <div class="flex gap-3 pt-2" style="border-top: 1px dashed rgba(255,255,255,0.08);">
+                <span class="text-white/30">04</span>
+                <span class="text-green-400">✓ measure</span>
+                <span class="text-white/50">{'("roi", { realtime: true })'}</span>
+              </div>
+            </div>
 
-      <div class="flex flex-wrap gap-4">
-        <a href="#contact" class="btn-orange px-10 py-4">無料相談を申し込む</a>
-        <a href="#services" class="btn-outline-white px-10 py-4">サービスを見る</a>
-      </div>
-
-      <!-- Quick stats -->
-      <div class="mt-14 pt-10 border-t border-white/10 flex flex-wrap gap-10">
-        {[
-          { num: '100%', label: 'オーダーメイド対応' },
-          { num: '迅速', label: 'スピーディーな対応' },
-          { num: '一貫', label: '戦略〜実行まで' },
-        ].map((s) => (
-          <div>
-            <p class="text-orange text-2xl font-black">{s.num}</p>
-            <p class="text-white/50 text-xs mt-1">{s.label}</p>
+            <!-- Progress bars -->
+            <div class="mt-6 space-y-3">
+              {[
+                { label: 'Strategy',    val: 92 },
+                { label: 'Execution',   val: 88 },
+                { label: 'Innovation',  val: 95 },
+              ].map((p) => (
+                <div>
+                  <div class="flex justify-between items-center mb-1.5">
+                    <span class="font-mono-tech text-[10px] text-white/50 tracking-wider uppercase">{p.label}</span>
+                    <span class="font-mono-tech text-[10px] text-orange">{p.val}%</span>
+                  </div>
+                  <div class="h-1 rounded-full overflow-hidden" style="background: rgba(255,255,255,0.06);">
+                    <div class="h-full rounded-full" style={`width:${p.val}%; background: linear-gradient(90deg, #F5821F, #FF6B2C);`}></div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
+
+          <!-- Floating badge -->
+          <div class="absolute -top-4 -right-4 glass-card px-4 py-3 glow-orange">
+            <p class="font-mono-tech text-[9px] text-white/40 tracking-widest">ACTIVE PROJECTS</p>
+            <p class="font-display font-bold text-2xl text-white">12+</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
-    <div class="w-px h-10 bg-gradient-to-b from-orange to-transparent"></div>
-    <span class="text-white text-[10px] tracking-widest">SCROLL</span>
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-50">
+    <span class="font-mono-tech text-white/40 text-[10px] tracking-[0.4em]">SCROLL</span>
+    <div class="w-px h-12 bg-gradient-to-b from-orange to-transparent"></div>
   </div>
 </section>

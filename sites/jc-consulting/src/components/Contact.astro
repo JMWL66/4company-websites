@@ -1,47 +1,78 @@
 ---
 ---
-<section id="contact" class="py-24 px-6 bg-orange-50">
-  <div class="max-w-3xl mx-auto">
-    <div class="text-center mb-12 fade-up">
-      <span class="section-label mb-3 block">CONTACT</span>
-      <h2 class="text-3xl md:text-4xl font-black text-navy mb-4">無料相談・お問い合わせ</h2>
-      <p class="text-gray-600 text-sm">まずはお気軽にご相談ください。初回相談は無料です。</p>
+<section id="contact" class="relative py-32 px-6 overflow-hidden">
+  <!-- glow -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full"
+       style="background: radial-gradient(circle, rgba(245,130,31,0.18) 0%, transparent 60%); filter: blur(80px);" aria-hidden="true"></div>
+
+  <div class="relative max-w-4xl mx-auto">
+    <div class="text-center mb-16 fade-up">
+      <span class="section-label mb-5 inline-flex">CONTACT / お問い合わせ</span>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+        <span class="gradient-text-cool">まずは</span><span class="gradient-text">無料相談</span><span class="gradient-text-cool">から。</span>
+      </h2>
+      <p class="text-white/50 text-base">経営課題のヒアリングから、最適なソリューションをご提案します。</p>
     </div>
 
-    <form class="fade-up bg-white rounded-xl p-8 shadow-sm border border-orange/10 space-y-5"
+    <form class="fade-up glass-card p-8 md:p-10 relative overflow-hidden"
       action="mailto:jc.ceo.yamaguchi@gmail.com" method="get" enctype="text/plain">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-        <div>
-          <label class="block text-navy text-xs font-semibold mb-2">会社名</label>
-          <input type="text" name="company"
-            class="w-full border border-gray-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-orange transition-colors"
-            placeholder="株式会社〇〇" />
+      <div class="absolute top-0 left-0 right-0 h-px"
+           style="background: linear-gradient(90deg, transparent, rgba(245,130,31,0.6), transparent);"></div>
+
+      <div class="flex items-center justify-between mb-8">
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-orange animate-pulse-dot"></span>
+          <span class="font-mono-tech text-[10px] text-white/40 tracking-widest">SECURE_FORM / ENCRYPTED</span>
         </div>
-        <div>
-          <label class="block text-navy text-xs font-semibold mb-2">お名前 *</label>
-          <input type="text" name="name" required
-            class="w-full border border-gray-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-orange transition-colors"
-            placeholder="山田 太郎" />
+        <span class="font-mono-tech text-[10px] text-white/30 tracking-widest">v1.0</span>
+      </div>
+
+      <div class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <label class="block font-mono-tech text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase">▸ Company / 会社名</label>
+            <input type="text" name="company"
+              class="w-full rounded-md px-4 py-3.5 text-sm text-white placeholder-white/20 focus:outline-none transition-all"
+              style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);"
+              placeholder="株式会社〇〇" />
+          </div>
+          <div>
+            <label class="block font-mono-tech text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase">▸ Name / お名前 *</label>
+            <input type="text" name="name" required
+              class="w-full rounded-md px-4 py-3.5 text-sm text-white placeholder-white/20 focus:outline-none transition-all"
+              style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);"
+              placeholder="山田 太郎" />
+          </div>
         </div>
+
+        <div>
+          <label class="block font-mono-tech text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase">▸ Email / メールアドレス *</label>
+          <input type="email" name="email" required
+            class="w-full rounded-md px-4 py-3.5 text-sm text-white placeholder-white/20 focus:outline-none transition-all"
+            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);"
+            placeholder="example@company.com" />
+        </div>
+
+        <div>
+          <label class="block font-mono-tech text-white/60 text-[10px] tracking-[0.2em] mb-2 uppercase">▸ Message / ご相談内容 *</label>
+          <textarea name="body" rows="6" required
+            class="w-full rounded-md px-4 py-3.5 text-sm text-white placeholder-white/20 focus:outline-none transition-all resize-none"
+            style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1);"
+            placeholder="経営課題・ご相談内容をご記入ください..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-orange w-full justify-center py-4 text-sm font-bold">
+          無料相談を申し込む
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+          </svg>
+        </button>
+
+        <p class="text-center text-white/30 text-xs pt-2">
+          または直接メール:
+          <a href="mailto:jc.ceo.yamaguchi@gmail.com" class="text-orange hover:underline ml-1 font-mono-tech text-[11px]">jc.ceo.yamaguchi@gmail.com</a>
+        </p>
       </div>
-      <div>
-        <label class="block text-navy text-xs font-semibold mb-2">メールアドレス *</label>
-        <input type="email" name="email" required
-          class="w-full border border-gray-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-orange transition-colors"
-          placeholder="example@company.com" />
-      </div>
-      <div>
-        <label class="block text-navy text-xs font-semibold mb-2">ご相談内容 *</label>
-        <textarea name="body" rows="5" required
-          class="w-full border border-gray-200 rounded px-4 py-3 text-sm focus:outline-none focus:border-orange transition-colors resize-none"
-          placeholder="経営課題・ご相談内容をご記入ください"></textarea>
-      </div>
-      <button type="submit" class="btn-orange w-full py-4 text-sm font-bold rounded">
-        無料相談を申し込む →
-      </button>
-      <p class="text-center text-gray-400 text-xs">
-        メール：<a href="mailto:jc.ceo.yamaguchi@gmail.com" class="text-orange hover:underline">jc.ceo.yamaguchi@gmail.com</a>
-      </p>
     </form>
   </div>
 </section>
